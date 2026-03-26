@@ -441,13 +441,17 @@ def_contingencies = {
     '''psspy.two_winding_data_3(199125,199130,r"""1""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],r"""67N-T82""")''',
     ],
 
-    '67N-T71':[
+    '67N-T71_g0':[
     '''psspy.two_winding_data_3(199110,199130,r"""1""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],r"""67N-T71""")''',
     ],
 
     '67N-T71_g5':[
     '''psspy.two_winding_data_3(199110,199130,r"""1""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],r"""67N-T71""")''',
     '''ras("g5")''',
+
+    '67N-T71_g6':[
+    '''psspy.two_winding_data_3(199110,199130,r"""1""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],r"""67N-T71""")''',
+    '''ras("g6")''',
     ],
     # 67N-811 trips L-8003 and 67N-T82
     '67N-811_G0':[

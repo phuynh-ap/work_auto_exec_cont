@@ -61,6 +61,9 @@
 #   example:
 #   python scripts\autocont_exec.py
 #
+#   2025/01/31  PVH
+#   Updated to use PSSE v35 instead of v34.
+#
 #   2023/01/31  PVH
 #   Added solved() to end of fdns to reflect blownup or other solved status.
 #
@@ -93,7 +96,7 @@ nameSrv         = "EMAPSSE02"                               # PSS/e server name
 nameWstn        = "EMA171275L"                              # Workstation name
 
 # Install paths
-locPsse34Def    = "C:\Program Files (x86)\PTI\PSSE34\PSSBIN"
+locPsse34Def    = "C:\Program Files (x86)\PTI\PSSE35\PSSBIN"
 locPsse348Wksn = "C:\Program Files (x86)\dev\psse34r8\PSSBIN"
 nameHost = socket.gethostname()
 
@@ -111,7 +114,7 @@ sys.path.append(PSSE_LOCATION)
 os.environ['PATH'] = os.environ['PATH'] + ';' +  PSSE_LOCATION
 
 # ---- Resuming imports -------------------------------------------------------
-import psse34
+import psse35
 import psspy
 import redirect
 

@@ -11,6 +11,9 @@
 # Removed dummy bus 199040 on L7014, added Spider Lake, 
 # ----------------------------------------------------------------------------------------------------
 #
+#   2025/08/22: PVH
+#   Updated contingencies for IR673 SIS.
+#
 #   2024/08/22: PVH
 #   IR671 contingencies to reflect 101V-MacDonald Pond POI. 
 #
@@ -1756,7 +1759,7 @@ def_contingencies = {
 
                    '43V-L6013':['''psspy.branch_chng(199340,199345,r"""2""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
 
-                   '43V-L6054':['''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
+                   '43V-L6054':['''psspy.dscn(199645)''',],
 
                    '43V-L6015':['''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
 
@@ -1778,7 +1781,7 @@ def_contingencies = {
                    '43V-T62':['''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                                
                                 # L-6054       
-                                '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                                '''psspy.dscn(199645)''',
                                 
                                 # L-6015
                                 '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -1789,7 +1792,7 @@ def_contingencies = {
                    '43V-615':['''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                                
                                 # L-6054       
-                                '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                                '''psspy.dscn(199645)''',
                                 
                                 # L-6015
                                 '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -1800,7 +1803,7 @@ def_contingencies = {
                    '43V-652':['''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                                
                                 # L-6054       
-                                '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                                '''psspy.dscn(199645)''',
                                 
                                 # L-6015
                                 '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -1811,7 +1814,7 @@ def_contingencies = {
                    '43V-604':['''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                                
                                 # L-6054       
-                                '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                                '''psspy.dscn(199645)''',
                                 
                                 # L-6015
                                 '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -1822,7 +1825,7 @@ def_contingencies = {
                    '43V-602':['''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                                
                                 # L-6054       
-                                '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                                '''psspy.dscn(199645)''',
                                 
                                 # L-6015
                                 '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -1915,7 +1918,7 @@ def_contingencies = {
                    '43V-B62':['''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                               
                                  # L-6054       
-                                 '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                                 '''psspy.dscn(199645)''',
                                
                                  # L-6015
                                  '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -1941,7 +1944,7 @@ def_contingencies = {
                         '''psspy.two_winding_chng_4(199322,199340,r"""2""",[0,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[r"""43V-T62""",_s])''',
                                    
                         # L-6054       
-                        '''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
+                        '''psspy.dscn(199645)''',
                         
                         # L-6015
                         '''psspy.branch_chng(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
@@ -2906,7 +2909,7 @@ def_contingencies = {
             '''psspy.dscn(199344)''',
             '''psspy.dscn(199328)''',
             '''psspy.dscn(199329)''',
-            '''psspy.branch_chng_3(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],_s)''',
+            '''psspy.dscn(199645)''',
             '''psspy.dscn(199333)''',
             '''psspy.branch_chng_3(199340,199345,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f],_s)'''
             ],

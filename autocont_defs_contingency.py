@@ -1,21 +1,21 @@
-    # autocont_defs_contingency.py
-    #
-    #
-    # *** CHECK UNITS TARGETED FOR SPS ACTION - ML OR LG/PA AND MATCH TO STUDY CASES *** 
-    #
-    # ----------------------------------------------------------------------------------------------------
-    # LOADFLOW Contingencies for 2019 Load Transfer Study
-    # Post ML - Use ML runback for Group 5 SPS and Group 6 SPS
-    # Added LG1 and LG4 options for SPS action where we are exporting to NL
-    # Updated:	September 2017, John Charlton
-    # Removed dummy bus 199040 on L7014, added Spider Lake, 
-    # ----------------------------------------------------------------------------------------------------
+# autocont_defs_contingency.py
+#
+#
+# *** CHECK UNITS TARGETED FOR SPS ACTION - ML OR LG/PA AND MATCH TO STUDY CASES *** 
+#
+# ----------------------------------------------------------------------------------------------------
+# LOADFLOW Contingencies for 2019 Load Transfer Study
+# Post ML - Use ML runback for Group 5 SPS and Group 6 SPS
+# Added LG1 and LG4 options for SPS action where we are exporting to NL
+# Updated:	September 2017, John Charlton
+# Removed dummy bus 199040 on L7014, added Spider Lake, 
+# ----------------------------------------------------------------------------------------------------
+#
+#   2024/08/22: PVH
+#   IR671 contingencies to reflect 101V-MacDonald Pond POI. 
+#
 
-    #import psspy
-    #from psspy import _i, _f, _s, _o
 
-    #def import_contingencydata():
-IR_ADDED="IR672"
 def_contingencies = {
 # ----------
 # 88S-Lingan
@@ -1072,7 +1072,7 @@ def_contingencies = {
                    '90H-L6003':['''psspy.branch_chng(199165,199184,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
 
                    # NS_L6004-1 handled in 101V
-                   # 'NS_L6004-1':['''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
+                   # 'NS_L6004-1':[#'''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
 
 
                    '90H-L5003-2':['''psspy.dscn(199177)''',],
@@ -1099,7 +1099,8 @@ def_contingencies = {
 
                    # 90H-605 trips NS_L6003, NS_L6004-1
                    '90H-605':['''psspy.branch_chng(199165,199184,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',
-                              '''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
+                              #'''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],     # modded
+                              '''psspy.dscn(199570)''',                                                                                                 # modded
                               #'''psspy.shunt_chng(199184,r"""2""",0,[_f,_f])'''],
 
                    # 90H-602 trips 90H-T1, NS_L6002-1
@@ -1132,7 +1133,8 @@ def_contingencies = {
                    '90H-607':[ '''psspy.dscn(199203)''',],
 
                    # 90H-604 trips NS_L6004-1
-                   '90H-604':['''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
+                   '90H-604':[#'''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],     # modded
+                                '''psspy.dscn(199570)'''],                                                                                              # modded
 
                    # 90H-601 trips NS_L6002-1
                    '90H-601':['''psspy.dscn(199204)''', '''no_island()''',],
@@ -2214,7 +2216,7 @@ def_contingencies = {
 # -------------
 
                    #L-6004 to 90H
-                   '101V-L6004-a':['''psspy.branch_chng(199184,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
+                   '101V-L6004-a':['''psspy.dscn(199570)''',],          # modded
                    # '101V-L6004-1':['''psspy.dscn(199790)''','''no_island()''',],
                    # NS_L6004-2 (L-6054), handled in 43V
                    # 'NS_L6004-2':['''psspy.branch_chng(199340,199500,r"""1""",[0,_i,_i,_i,_i,_i],[_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f,_f])''',],
